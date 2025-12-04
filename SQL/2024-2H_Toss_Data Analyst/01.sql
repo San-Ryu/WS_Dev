@@ -1,0 +1,24 @@
+/* Q
+한 학교에서 특별활동을 아래 테이블을 활용하여 관리하고 있습니다.
+
+    TABLE STUDENT
+    ID INTEGER NOT NULL PRIMARY KEY
+    , NAME VARCHAR(30) NOT NULL
+
+    TABLE STUDENTACTIVITIES
+    STUDENTID INTEGER NOT NULL
+    , ACTIVITY VARCHAR(30) NOT NULL
+    , PRIMARY KEY (STUDENTID, ACTIVITY)
+    , FOREIGN KEY (STUDENTID) REFERENCES STUDENTS(ID)
+
+"Tennis" 또는 "Football" 활동에 참여한 학생의 ID와 이름을 확인할 수 있는 쿼리를 작성하여 주세요.
+
+자세한 Example Case는 여기서 확인하세요. (없음)
+*/
+
+-- Pass
+SELECT ID, NAME
+FROM STUDENTS AS STD
+LEFT OUTER JOIN STUDENTSACTIVITIES AS ACT ON STD.ID = ACT.STUDENTID
+WHERE 1=1
+AND ((ACTIVITY = 'Tennis') OR (ACTIVITY = 'Football'))|

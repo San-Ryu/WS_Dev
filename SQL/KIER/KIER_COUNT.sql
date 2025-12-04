@@ -1,0 +1,51 @@
+SELECT	count(*)
+FROM kier.SM_ELEC_METER_HST
+union all
+SELECT	count(*)
+FROM kier.SM_HEAT_METER_HST 
+union all
+SELECT	count(*)
+FROM kier.SM_GAS_METER_HST
+union all
+SELECT	count(*)
+FROM kier.SM_HOT_METER_HST
+union all
+SELECT	count(*)
+FROM kier.SM_WATER_METER_HST
+
+-- 22020371
+-- 16731947
+-- 18771579
+-- 22009416
+-- 22150382
+
+SELECT	count(*)
+FROM kier.SM_ELEC_METER_HST
+WHERE 	1 = 1
+AND 	HOUSE_ID_DONG = 561
+union all
+SELECT	count(*)
+FROM kier.SM_HEAT_METER_HST 
+WHERE 	1 = 1
+AND 	HOUSE_ID_DONG = 561
+union all
+SELECT	count(*)
+FROM kier.SM_GAS_METER_HST
+WHERE 	1 = 1
+AND 	HOUSE_ID_DONG = 561
+union all
+SELECT	count(*)
+FROM kier.SM_HOT_METER_HST
+WHERE 	1 = 1
+AND 	HOUSE_ID_DONG = 561
+union all
+SELECT	count(*)
+FROM kier.SM_WATER_METER_HST
+WHERE 	1 = 1
+AND 	HOUSE_ID_DONG = 561
+
+-- 4560009
+-- 3474560
+-- 3888568
+-- 4555888
+-- 4583622
